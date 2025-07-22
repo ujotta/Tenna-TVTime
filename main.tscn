@@ -1,14 +1,14 @@
 [gd_scene load_steps=25 format=3 uid="uid://jmv6tdinjnrr"]
 
 [ext_resource type="Script" uid="uid://n8jikcfemi3u" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="Texture2D" uid="uid://dqaio1mr55uhn" path="res://assets/img/faces/whisper.png" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://ch0julno1olpj" path="res://assets/img/faces/smile.png" id="3_272bh"]
-[ext_resource type="AudioStream" uid="uid://cwayk1e03qy8e" path="res://assets/aud/songs/theboard.mp3" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://cvokjhx2o21ni" path="res://assets/img/faces/dat-grin.png" id="4_5vw27"]
-[ext_resource type="Texture2D" uid="uid://bvawjqe0fd2wo" path="res://assets/img/faces/happy.png" id="5_kek77"]
-[ext_resource type="AudioStream" uid="uid://vd475duilew3" path="res://assets/aud/tenna/talk/tenna.mp3" id="7_4c57u"]
-[ext_resource type="Texture2D" uid="uid://b6llqeup47e2h" path="res://assets/img/animations/myhead.png" id="8_kek77"]
-[ext_resource type="Texture2D" uid="uid://c26xjk866pu3d" path="res://assets/img/animations/static.png" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dqaio1mr55uhn" path="res://img/faces/whisper.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://ch0julno1olpj" path="res://img/faces/smile.png" id="3_272bh"]
+[ext_resource type="AudioStream" uid="uid://cwayk1e03qy8e" path="res://aud/songs/theboard.mp3" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cvokjhx2o21ni" path="res://img/faces/dat-grin.png" id="4_5vw27"]
+[ext_resource type="Texture2D" uid="uid://bvawjqe0fd2wo" path="res://img/faces/happy.png" id="5_kek77"]
+[ext_resource type="AudioStream" uid="uid://vd475duilew3" path="res://aud/tenna/talk/tenna.mp3" id="7_4c57u"]
+[ext_resource type="Texture2D" uid="uid://b6llqeup47e2h" path="res://img/animations/myhead.png" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://c26xjk866pu3d" path="res://img/animations/static.png" id="9_4c57u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_efxa6"]
 animations = [{

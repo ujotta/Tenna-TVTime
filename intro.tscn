@@ -1,9 +1,9 @@
 [gd_scene load_steps=30 format=3 uid="uid://1jvleika6o5w"]
 
 [ext_resource type="Script" uid="uid://bksh10yhqraw4" path="res://scripts/intro.gd" id="1_ayt76"]
-[ext_resource type="Shader" uid="uid://c3bqwm74iymvv" path="res://assets/shaders/progress.gdshader" id="1_s2ta7"]
-[ext_resource type="Texture2D" uid="uid://5ol8e5bjcims" path="res://assets/img/UI/fountain (1).png" id="2_0a7ni"]
-[ext_resource type="AudioStream" uid="uid://dm7dee1vm0tcy" path="res://assets/aud/sfx/dark-fountain-creating-_-opening-made-with-Voicemod.mp3" id="4_0a7ni"]
+[ext_resource type="Shader" uid="uid://c3bqwm74iymvv" path="res://shaders/progress.gdshader" id="1_s2ta7"]
+[ext_resource type="Texture2D" uid="uid://5ol8e5bjcims" path="res://img/UI/fountain (1).png" id="2_0a7ni"]
+[ext_resource type="AudioStream" uid="uid://dm7dee1vm0tcy" path="res://aud/sfx/dark-fountain-creating-_-opening-made-with-Voicemod.mp3" id="4_0a7ni"]
 
 [sub_resource type="Animation" id="Animation_ayt76"]
 resource_name = "a"
