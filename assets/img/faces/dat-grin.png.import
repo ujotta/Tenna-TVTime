@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c26xjk866pu3d"
-path="res://.godot/imported/static.png-0cdd2894b3946d1bb33884f601d33f3e.ctex"
+uid="uid://cvokjhx2o21ni"
+path="res://.godot/imported/dat-grin.png-f60639613063255a10ab7b939efd9223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/animations/static.png"
-dest_files=["res://.godot/imported/static.png-0cdd2894b3946d1bb33884f601d33f3e.ctex"]
+source_file="res://assets/img/faces/dat-grin.png"
+dest_files=["res://.godot/imported/dat-grin.png-f60639613063255a10ab7b939efd9223.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

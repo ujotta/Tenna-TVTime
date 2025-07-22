@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6llqeup47e2h"
-path="res://.godot/imported/myhead.png-fc849488fd0e4a5ddb9ee2aa01ad7f13.ctex"
+uid="uid://6k7uyygrahkp"
+path="res://.godot/imported/scare.png-524d2d61ddcc6750a90e4d6c3b0eae82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/animations/myhead.png"
-dest_files=["res://.godot/imported/myhead.png-fc849488fd0e4a5ddb9ee2aa01ad7f13.ctex"]
+source_file="res://assets/img/animations/scare.png"
+dest_files=["res://.godot/imported/scare.png-524d2d61ddcc6750a90e4d6c3b0eae82.ctex"]
 
 [params]
 

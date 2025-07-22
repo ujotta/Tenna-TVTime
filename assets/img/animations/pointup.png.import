@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8beml2c5lalc"
-path="res://.godot/imported/pointup.png-560a1581f4eee671c1c2c9d8c054faad.ctex"
+path="res://.godot/imported/pointup.png-5d81df44fd1382333ec2dace5ba0ecab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/animations/pointup.png"
-dest_files=["res://.godot/imported/pointup.png-560a1581f4eee671c1c2c9d8c054faad.ctex"]
+source_file="res://assets/img/animations/pointup.png"
+dest_files=["res://.godot/imported/pointup.png-5d81df44fd1382333ec2dace5ba0ecab.ctex"]
 
 [params]
 
