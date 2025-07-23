@@ -118,7 +118,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Faces:visible")
+tracks/0/path = NodePath("Main/Faces:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -130,7 +130,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Tenna:animation")
+tracks/1/path = NodePath("Main/Tenna:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -142,7 +142,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Song:playing")
+tracks/2/path = NodePath("Main/Song:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -154,7 +154,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Tenna:scale")
+tracks/3/path = NodePath("Main/Tenna:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -166,7 +166,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Tenna:position")
+tracks/4/path = NodePath("Main/Tenna:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -178,7 +178,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Tenna:visible")
+tracks/5/path = NodePath("Main/Tenna:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -206,7 +206,7 @@ length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Faces:visible")
+tracks/0/path = NodePath("Main/Faces:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -218,7 +218,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Tenna:animation")
+tracks/1/path = NodePath("Main/Tenna:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -230,7 +230,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Tenna")
+tracks/2/path = NodePath("Main/Tenna")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -247,7 +247,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Song:playing")
+tracks/3/path = NodePath("Main/Song:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -259,7 +259,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Tenna:scale")
+tracks/4/path = NodePath("Main/Tenna:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -271,7 +271,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Tenna:position")
+tracks/5/path = NodePath("Main/Tenna:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -283,7 +283,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Tenna:visible")
+tracks/6/path = NodePath("Main/Tenna:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -315,7 +315,9 @@ _data = {
 script = ExtResource("1_lquwl")
 rotmax = 1
 
-[node name="Faces" type="AnimatedSprite2D" parent="."]
+[node name="Main" type="Node2D" parent="."]
+
+[node name="Faces" type="AnimatedSprite2D" parent="Main"]
 visible = false
 texture_repeat = 2
 position = Vector2(200, 150)
@@ -323,24 +325,25 @@ scale = Vector2(11.111, 11.011)
 sprite_frames = SubResource("SpriteFrames_efxa6")
 frame_progress = 0.96827
 
-[node name="Song" type="AudioStreamPlayer" parent="."]
+[node name="Song" type="AudioStreamPlayer" parent="Main"]
 stream = ExtResource("3_h2yge")
 
-[node name="Talk" type="AudioStreamPlayer" parent="."]
+[node name="Talk" type="AudioStreamPlayer" parent="Main"]
 stream = ExtResource("7_4c57u")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="Main"]
 wait_time = 0.2
 one_shot = true
 
-[node name="Tenna" type="AnimatedSprite2D" parent="."]
+[node name="Tenna" type="AnimatedSprite2D" parent="Main"]
 position = Vector2(208, 160)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_getpj")
 animation = &"static"
 autoplay = "crazy"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_efxa6")
 }

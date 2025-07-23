@@ -1,17 +1,29 @@
 extends Node
 
-@onready var faces: AnimatedSprite2D = $Faces
-@onready var timer: Timer = $Timer
-@onready var talk: AudioStreamPlayer = $Talk
+@onready var faces: AnimatedSprite2D = $Main/Faces
+@onready var timer: Timer = $Main/Timer
+@onready var talk: AudioStreamPlayer = $Main/Talk
 
-var channels : int = 3
-var channel : int = 0
 var time : float = .3
 var rot : float = 0.0
 var rot2 : float = 0.0
 @export var rotmax : int = 10
 
-# Called when the node enters the scene tree for the first time.
+enum Channels {
+	MAIN,
+	WEATHER,
+	CONFIG,
+	CHALLENGE
+}
+var channel : Channels = Channels.MAIN
+
+# channel cheat sheet
+# (yes i know this is unnecessary im just making a reference to a very genius person)
+# 0: Main 
+# 1: weather 
+# 2: physical challenges
+# 3: configs 
+
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(preload("res://img/UI/cursor2.png"))
 	timer.timeout.connect(_on_timer_timeout)
@@ -20,10 +32,10 @@ func _ready() -> void:
 	talk.stream_paused = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	match channel:
-		0:
+		Channels.MAIN:
 			rot += 1 * delta
 			rot2 += 2 * delta
 			faces.position.x = 200 + Vector2(10, 0).rotated(rot).x
@@ -34,8 +46,10 @@ func _process(delta: float) -> void:
 			faces.speed_scale = 0
 			if !talk.stream_paused:
 				faces.speed_scale = 1
-		1:
+		Channels.WEATHER:
 			pass # Will do this soon
+		_:
+			channel = Channels.MAIN
 
 func handle_input(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up"):
