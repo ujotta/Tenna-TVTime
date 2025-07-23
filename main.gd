@@ -4,10 +4,12 @@ extends Node
 @onready var timer: Timer = $Timer
 @onready var talk: AudioStreamPlayer = $Talk
 
-var time := .3
-var rot := 0.0
-var rot2 := 0.0
-@export var rotmax = 10
+var channels : int = 3
+var channel : int = 0
+var time : float = .3
+var rot : float = 0.0
+var rot2 : float = 0.0
+@export var rotmax : int = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,11 +22,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	rot += 1 * delta
-	rot2 += 2 * delta
-	faces.position.x = 200 + Vector2(10, 0).rotated(rot).x
-	faces.position.y = 150 + Vector2(5, 0).rotated(rot2).y
-	faces.rotation = deg_to_rad(Vector2(rotmax, 0).rotated(rot).x)
+	match channel:
+		0:
+			rot += 1 * delta
+			rot2 += 2 * delta
+			faces.position.x = 200 + Vector2(10, 0).rotated(rot).x
+			faces.position.y = 150 + Vector2(5, 0).rotated(rot2).y
+			faces.rotation = deg_to_rad(Vector2(rotmax, 0).rotated(rot).x)
+			handle_input(delta)
+			
+			faces.speed_scale = 0
+			if !talk.stream_paused:
+				faces.speed_scale = 1
+		1:
+			pass # Will do this soon
+
+func handle_input(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up"):
 		print("press")
 		#talk.playing = true
@@ -37,10 +50,7 @@ func _process(delta: float) -> void:
 		talk.stream_paused = false
 	elif timer.is_stopped():
 		talk.stream_paused = true
-	faces.speed_scale = 0
-	if !talk.stream_paused:
-		faces.speed_scale = 1
-	
+
 func _on_timer_timeout() -> void:
 	talk.stream_paused = true
 	print("stop")

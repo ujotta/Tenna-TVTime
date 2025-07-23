@@ -1,6 +1,6 @@
 extends Node
 
-var timer := false
+var timer : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(preload("res://img/UI/cursor2.png"))
