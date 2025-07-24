@@ -325,4 +325,5 @@ offset_bottom = -136.9
 rotation = 1.5708
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_0a7ni")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

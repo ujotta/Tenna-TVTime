@@ -1,13 +1,20 @@
-[gd_scene load_steps=25 format=3 uid="uid://jmv6tdinjnrr"]
+[gd_scene load_steps=34 format=3 uid="uid://jmv6tdinjnrr"]
 
 [ext_resource type="Script" uid="uid://n8jikcfemi3u" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dqaio1mr55uhn" path="res://img/faces/whisper.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bddnyrxtooa0j" path="res://transition.gd" id="2_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://ch0julno1olpj" path="res://img/faces/smile.png" id="3_272bh"]
 [ext_resource type="AudioStream" uid="uid://cwayk1e03qy8e" path="res://aud/songs/theboard.mp3" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://btbrl4gbc5668" path="res://img/animations/static/1.png" id="3_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cvokjhx2o21ni" path="res://img/faces/dat-grin.png" id="4_5vw27"]
+[ext_resource type="Texture2D" uid="uid://lnndnqhiea10" path="res://img/animations/static/4.png" id="4_074og"]
+[ext_resource type="Texture2D" uid="uid://6xxyjy4tftd7" path="res://img/animations/static/6.png" id="5_cegan"]
 [ext_resource type="Texture2D" uid="uid://bvawjqe0fd2wo" path="res://img/faces/happy.png" id="5_kek77"]
+[ext_resource type="Texture2D" uid="uid://c0sxr00sd3w8b" path="res://img/animations/static/22.png" id="6_82xsv"]
 [ext_resource type="AudioStream" uid="uid://vd475duilew3" path="res://aud/tenna/talk/tenna.mp3" id="7_4c57u"]
+[ext_resource type="Texture2D" uid="uid://c3xwrd8lavn5t" path="res://img/animations/static/24.png" id="7_getpj"]
 [ext_resource type="Texture2D" uid="uid://b6llqeup47e2h" path="res://img/animations/myhead.png" id="8_kek77"]
+[ext_resource type="AudioStream" uid="uid://c7n205j13t2uk" path="res://aud/sfx/static/static.wav" id="8_ryguw"]
 [ext_resource type="Texture2D" uid="uid://c26xjk866pu3d" path="res://img/animations/static.png" id="9_4c57u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_efxa6"]
@@ -118,7 +125,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Main/Faces:visible")
+tracks/0/path = NodePath("Channels/Main/Faces:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -130,7 +137,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Main/Tenna:animation")
+tracks/1/path = NodePath("Channels/Main/Tenna:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -142,7 +149,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Main/Song:playing")
+tracks/2/path = NodePath("Channels/Main/Song:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -154,7 +161,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Main/Tenna:scale")
+tracks/3/path = NodePath("Channels/Main/Tenna:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -166,7 +173,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Main/Tenna:position")
+tracks/4/path = NodePath("Channels/Main/Tenna:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -178,7 +185,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Main/Tenna:visible")
+tracks/5/path = NodePath("Channels/Main/Tenna:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -206,7 +213,7 @@ length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Main/Faces:visible")
+tracks/0/path = NodePath("Channels/Main/Faces:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -218,7 +225,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Main/Tenna:animation")
+tracks/1/path = NodePath("Channels/Main/Tenna:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -230,7 +237,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Main/Tenna")
+tracks/2/path = NodePath("Channels/Main/Tenna")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -247,7 +254,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Main/Song:playing")
+tracks/3/path = NodePath("Channels/Main/Song:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -259,7 +266,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Main/Tenna:scale")
+tracks/4/path = NodePath("Channels/Main/Tenna:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -271,7 +278,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Main/Tenna:position")
+tracks/5/path = NodePath("Channels/Main/Tenna:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -283,7 +290,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Main/Tenna:visible")
+tracks/6/path = NodePath("Channels/Main/Tenna:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -305,19 +312,49 @@ tracks/7/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_1u8w0"]
+resource_name = "change channel"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxa6"]
 _data = {
 &"RESET": SubResource("Animation_4c57u"),
+&"change channel": SubResource("Animation_1u8w0"),
 &"introd": SubResource("Animation_kek77")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d13ii"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yaehf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cegan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_82xsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_getpj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lquwl")
 rotmax = 1
 
-[node name="Main" type="Node2D" parent="."]
+[node name="Channels" type="Node2D" parent="."]
 
-[node name="Faces" type="AnimatedSprite2D" parent="Main"]
+[node name="Main" type="Node2D" parent="Channels"]
+visible = false
+
+[node name="Faces" type="AnimatedSprite2D" parent="Channels/Main"]
 visible = false
 texture_repeat = 2
 position = Vector2(200, 150)
@@ -325,31 +362,41 @@ scale = Vector2(11.111, 11.011)
 sprite_frames = SubResource("SpriteFrames_efxa6")
 frame_progress = 0.96827
 
-[node name="Song" type="AudioStreamPlayer" parent="Main"]
+[node name="Song" type="AudioStreamPlayer" parent="Channels/Main"]
 stream = ExtResource("3_h2yge")
 
-[node name="Talk" type="AudioStreamPlayer" parent="Main"]
+[node name="Talk" type="AudioStreamPlayer" parent="Channels/Main"]
 stream = ExtResource("7_4c57u")
 
-[node name="Timer" type="Timer" parent="Main"]
+[node name="Timer" type="Timer" parent="Channels/Main"]
 wait_time = 0.2
 one_shot = true
 
-[node name="Tenna" type="AnimatedSprite2D" parent="Main"]
+[node name="Tenna" type="AnimatedSprite2D" parent="Channels/Main"]
 position = Vector2(208, 160)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_getpj")
 animation = &"static"
 autoplay = "crazy"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Channels/Main"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_efxa6")
 }
 autoplay = "introd"
 
+[node name="Weather" type="Node2D" parent="Channels"]
+visible = false
+
+[node name="Options" type="Node2D" parent="Channels"]
+visible = false
+
+[node name="Challenge" type="Node2D" parent="Channels"]
+visible = false
+
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -366,3 +413,18 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Transition" type="Node2D" parent="."]
+visible = false
+script = ExtResource("2_2cqfq")
+
+[node name="Static" type="AnimatedSprite2D" parent="Transition"]
+position = Vector2(200, 150)
+scale = Vector2(0.422222, 0.422222)
+sprite_frames = SubResource("SpriteFrames_d13ii")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+
+[node name="Audio" type="AudioStreamPlayer" parent="Transition"]
+stream = ExtResource("8_ryguw")
