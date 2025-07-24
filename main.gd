@@ -31,8 +31,6 @@ func _ready() -> void:
 	current_channel = $Channels/Main
 	$Channels.position.x = int(get_viewport().get_visible_rect().size.x /2) - ProjectSettings.get_setting("display/window/size/viewport_width") / 2
 	transition.position.x = $Channels.position.x
-	print(get_viewport().get_visible_rect().size.x)
-	print(get_viewport().size.x)
 	Input.set_custom_mouse_cursor(preload("res://img/UI/cursor2.png"))
 	timer.timeout.connect(_on_timer_timeout)
 	faces.play()
@@ -57,7 +55,6 @@ func _process(delta: float) -> void:
 			faces.rotation = deg_to_rad(Vector2(rotmax, 0).rotated(rot).x)
 
 			if Input.is_action_just_pressed("ui_up"):
-				print("press")
 				#talk.playing = true
 				talk.stream_paused = false
 				#timer.wait_time += time
@@ -72,29 +69,24 @@ func _process(delta: float) -> void:
 			faces.speed_scale = 0
 			if !talk.stream_paused:
 				faces.speed_scale = 1
-		Channels.WEATHER: # TODO: Configure weather API
+		Channels.WEATHER: # TODO: everything
 			current_channel = $Channels/Weather
 		Channels.OPTIONS: # TODO: everything
 			current_channel = $Channels/Options
 		Channels.CHALLENGE: # TODO: everything
 			current_channel = $Channels/Challenge
-			#print("Challenge")
-	print("Visible channel: ", current_channel.name)
 	current_channel.visible = true
 
 func handle_input(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_left"):
 		transition.play()
 		current_channel.visible = false
-		print("turned off channel ", str(current_channel.name))
 		channel -= 1
 	elif Input.is_action_just_pressed("ui_right"):
 		transition.play()
 		current_channel.visible = false
-		print("turned off channel ", str(current_channel.name))
 		channel += 1
 		
 
 func _on_timer_timeout() -> void:
 	talk.stream_paused = true
-	print("stop")
