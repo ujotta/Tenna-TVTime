@@ -13,7 +13,7 @@ func play() -> void:
 	visible = true
 	animatedsprite.play()
 	audio.play()
-	
+
 
 func _on_animaiton_finished() -> void:
 	visible = false

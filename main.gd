@@ -40,6 +40,8 @@ func _ready() -> void:
 # TODO: Channels and channel transition
 
 func _process(delta: float) -> void:
+	get_tree().root.transparent_bg = false
+	
 	handle_input(delta)
 	if channel < 0:
 		channel = Channels.size() - 1

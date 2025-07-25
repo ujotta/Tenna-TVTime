@@ -427,3 +427,4 @@ frame_progress = 1.0
 
 [node name="Audio" type="AudioStreamPlayer" parent="Transition"]
 stream = ExtResource("8_ryguw")
+volume_db = 8.0
