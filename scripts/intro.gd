@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	if timer && !$Control/ColorRect2.material.get_shader_parameter("progress") >= 1.1:
 		$Control/ColorRect2.material.set_shader_parameter("progress",$Control/ColorRect2.material.get_shader_parameter("progress") + delta / 4)
 	elif $Control/ColorRect2.material.get_shader_parameter("progress") >= 1.1:
-		get_tree().change_scene_to_file("res://main.tscn")
+		get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func start() -> void:
 	timer = true
