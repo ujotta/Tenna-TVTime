@@ -3,6 +3,20 @@ extends Node
 var timer : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	DiscordRPC.app_id = 1401015371934208082 # Application ID
+	DiscordRPC.details = "Faço programa 20 real a linha de codigo"
+	DiscordRPC.state = "So to fazendo bosdta mermo :3"
+	DiscordRPC.large_image = "res://img/faces/whisper.png" # Image key from "Art Assets"
+	DiscordRPC.large_image_text = "Sla oq bota agui"
+	DiscordRPC.small_image = "res://img/faces/whisper.png" # Image key from "Art Assets"
+	DiscordRPC.small_image_text = "Abulé"
+
+	DiscordRPC.start_timestamp = int(Time.get_unix_time_from_system()) # "02:46 elapsed"
+	# DiscordRPC.end_timestamp = int(Time.get_unix_time_from_system()) + 3600 # +1 hour in unix time / "01:00:00 remaining"
+
+	DiscordRPC.refresh() # Always refresh after changing the values!
+	
+	
 	$HTTPRequest.request_completed.connect(_on_request_completed)
 	$HTTPRequest.request("https://api.github.com/repos/ujotta/tenna-tvtime/releases/latest")
 	print("current version: ", ProjectSettings.get_setting("application/config/version"))
